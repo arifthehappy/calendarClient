@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+body{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    /* background-color:#fff; */
+    background-color: rgb(191, 250, 221);
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(93, 133, 219);
+}
+
+button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px grey;
+    border: none;
+    outline: none;
+    padding: 6px;
+    border-radius: 5px;
+    font-size:medium;
+    font-family: 'Open Sans',sans-serif;
+    color: #fff;
+    background-color: #4285f4;
+}
+
+#header{
+    padding:10px;
+    /* color: #d36c6c; */
+    color:#bd6666;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#container{
+    width: 770px;
+}
+
+#weekdays{
+    width: 100%;
+    /* padding: 1%; */
+    display: flex;
+    color: #c49696;
+}
+
+#weekdays div{
+    width: 100px;
+    padding: 10px;
+}
+
+#calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cal{
+    /* border: 1px solid red; */
+     box-shadow: 0px 0px 3px rgb(185, 137, 137);
+}
+
+
+
+#scheduleToday{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(49, 49, 53);
+    padding: 1%;
+}
+
+.day{
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 5px;
+    box-shadow: 0px 0px 3px rgb(51, 17, 17);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.day:hover {
+    background-color: #bfd2db;
+}
+
+.day + #currentDay{
+    background-color: #bfd2db;
+}
+
+.schedule{
+    font-size: 10px;
+    padding: 10px;
+    background-color: #4c4952;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 100%;
+    margin: 4px;
+    cursor: pointer;
+    border: 2px solid rgb(249, 252, 252);
+    /* max-height: 55px; */
+    /* overflow: hidden; */
+}
+
+
+
+.scheduleHint{
+    border-radius: 50%;
+    background-color: #58bae4;
+    height: 10px;
+    width: 10px;
+    display: block;
+}
+
+.schedule h3,  h5{
+    line-height: 0;
+}
+
+.padding{
+    cursor: default !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+#newClassModal, #deleteClassModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 2px black;
+    border-radius: 5px;
+    width:fit-content;
+    top: 120px;
+    left: 20%;
+    -webkit-box-align: center;
+    position:fixed;
+    font-family: sans-serif;
+}
+
+label{
+    color: rgb(46, 40, 40);
+}
+
+#batchTitleInput,#facultyInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#batchTitleInput.error{
+    border: 2px solid red;
+}
+#dateTimeInput{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+#batchDateInput, #batchTimeInput{
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0px 0px 3px gray;
+    
+}
+
+
+#cancelButton, #deleteButton {
+  background-color: #d36c6c;
+}
+#saveButton, #closeButton {
+  background-color: #92a1d1;
+}
+
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+}

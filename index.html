@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Scheduler</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="row">
+    <div id="container">
+        <div id="cal">
+            <div id="header">
+                <div id="monthDisplay"></div>
+                <div>
+                    <button id="today">Today</button>
+                    <button id="prevBtn">Prev</button>
+                    <button id="nextBtn">Next</button>
+                    <!-- <button id="createClass" style="background-color: brown;">Create</button> -->
+                </div>
+            </div>
+
+            <div id="weekdays">
+                <div>SUN</div>
+                <div>MON</div>
+                <div>TUE</div>
+                <div>WED</div>
+                <div>THU</div>
+                <div>FRI</div>
+                <div>SAT</div>
+            </div>
+
+            <div id="calendar">
+                <!-- <div class="day">hei</div>
+                <div class="day">hei</div>
+                <div class="day">hei</div>
+                <div class="day">hei</div>
+                <div class="day">hei</div> -->
+            </div>
+        </div>
+
+        <div id="scheduleToday">
+           
+        </div>
+
+
+
+        <div id="newClassModal">
+            <h2>Schedule Class</h2>
+            <form action="" method="" name="scheduler" id="scheduler">
+                <label for="facultyInput">Select Faculty</label>
+                <select form="scheduler" required autofocus name="facultyInput" id="facultyInput">
+                    <option value="phyxwala">Phyx wala</option>
+                    <option value="mathswala">Maths wala</option>
+                </select>
+                <input required type="text" id="batchTitleInput" placeholder="Enter Class Title"/>
+                <div id="dateTimeInput">
+                    <input required type="date" name="" id="batchDateInput"/>
+                    <input required type="time" name="batchStartTimeInput" id="batchStartTimeInput" value="00:00"/> -
+                    <input required type="time" name="batchEndTimeInput" id="batchEndTimeInput" value="00:00"/>
+                </div>
+                <button type="submit" id="saveBtn">Save</button>
+                <button type="reset" id="cancelBtn">Cancel</button>
+            </form>
+        </div>
+
+        <div id="deleteClassModal">
+            <h2>Class</h2>
+            <p id="classFaculty"></p>
+            <p id="classDate"></p>
+            <p id="classTime"></p>
+            
+
+            <button id="deleteBtn">Delete</button>
+            <button id="closeBtn">Close</button>
+        </div>
+
+
+
+    </div>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
